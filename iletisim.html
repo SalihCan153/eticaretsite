@@ -6,9 +6,11 @@
   <title>Ürünler - Lion Premium</title>
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <!-- Özel CSS -->
-  <link rel="stylesheet" href="style.css">
   <style>
+
     /* Header kısmının arka plan rengini 1A1711 yapıyoruz */
 .header {
   background-color: #1A1711 !important; /* Header arka plan rengi */
@@ -18,10 +20,10 @@
   color: gold !important; /* Logo rengi altın rengi */
 }
 
-/* Navbar linkleri için beyaz renk */
-.navbar-nav .nav-link {
-  color: white !important;
+a {
+  text-decoration: none;
 }
+
 
 .navbar-nav .nav-link:hover {
   color: #FFD700 !important; /* Hoverda altın rengi */
@@ -38,36 +40,37 @@ body {
   flex-grow: 1; /* İçeriğin tüm boşluğu doldurması için */
 }
 
-/* Footer Kısmı */
-footer {
-  background-color: #1A1711; /* Footer arka plan rengi */
-  color: white; /* Yazı rengi beyaz */
-  text-align: center; /* Ortada hizalama */
-  padding: 10px 0; /* Üst ve alt iç boşluk */
-  margin-top: auto; /* Footer'ı sayfa altına itiyor */
-  width: 100%; /* Tam genişlik */
+  /* Footer Kısmı */
+  footer {
+    background-color: #1A1711; /* Footer arka planı deri rengi */
+    color: white; /* Yazı rengi beyaz */
+    bottom: 0; /* Ekranın altına yapıştırır */
+    width: 100%; /* Genişliği tam yapar */
+    z-index: 1000; /* Önde görünmesini sağlar */
 }
 
-footer .nav-item .nav-link {
-  color: white !important; /* Linklerin rengi beyaz, !important ile daha güçlü yapılır */
-}
+    footer .nav-item .nav-link {
+      color: white !important; /* Linklerin rengi beyaz, !important ile daha güçlü yapılır */
+    }
 
-footer .nav-item .nav-link:hover {
-  color: #FFD700 !important; /* Link üzerine gelindiğinde altın renk */
-}
+    footer .nav-item .nav-link:hover {
+      color: #FFD700 !important; /* Link üzerine gelindiğinde altın renk */
+    }
 
-footer p {
-  color: white; /* Alt metin beyaz */
-}
+    footer p {
+      color: white; /* Alt metin beyaz */
+    }
 
+    
   </style>
 </head>
 <body>
+ 
+ 
   <!-- Header -->
   <header class="header bg-dark text-white shadow-lg">
     <nav class="navbar navbar-expand-lg navbar-dark container">
       <div class="d-flex align-items-center">
-        <i class="fa-solid fa-utensils me-2" style="color: gold; font-size: 2rem;"></i>
         <a class="navbar-brand text-warning fs-2 fw-bold" href="index.html">Lion Premium</a>
       </div>
 
@@ -84,82 +87,88 @@ footer p {
     </nav>
   </header>
 
-  <!-- Sayfa içeriği -->
-  <div class="content">
-    <!-- İletişim Kısmı -->
-    <section id="iletisim" class="py-5" style="background-color: #f8f9fa;">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <h2 class="text-warning">İletişim</h2>
-            <p class="fs-5">Bize ulaşmak için aşağıdaki bilgileri kullanabilirsiniz.</p>
-            
-            <!-- İletişim Bilgileri -->
-            <ul class="list-unstyled">
-              <li>
-                <strong>Adres:</strong> Lion Premium Garage, Konya, Türkiye
-              </li>
-              <li>
-                <strong>Telefon:</strong> +90 123 456 78 90
-              </li>
-              <li>
-                <strong>E-posta:</strong> info@lionpremium.com
-              </li>
-            </ul>
-            
-            <!-- Sosyal Medya Bağlantıları -->
-            <div class="social-icons mt-4">
-              <a href="#" class="text-warning me-3" target="_blank">
-                <i class="fa-brands fa-instagram" style="font-size: 2rem;"></i>
-              </a>
-              <a href="#" class="text-warning me-3" target="_blank">
-                <i class="fa-brands fa-facebook" style="font-size: 2rem;"></i>
-              </a>
-              <a href="#" class="text-warning" target="_blank">
-                <i class="fa-brands fa-twitter" style="font-size: 2rem;"></i>
-              </a>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <h2 class="text-warning">Bize Ulaşın</h2>
-            
-            <!-- İletişim Formu -->
-            <form>
-              <div class="mb-3">
-                <label for="isim" class="form-label">Adınız Soyadınız</label>
-                <input type="text" class="form-control" id="isim" required>
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">E-posta Adresiniz</label>
-                <input type="email" class="form-control" id="email" required>
-              </div>
-              <div class="mb-3">
-                <label for="mesaj" class="form-label">Mesajınız</label>
-                <textarea class="form-control" id="mesaj" rows="4" required></textarea>
-              </div>
-              <button type="submit" class="btn btn-warning">Gönder</button>
-            </form>
+
+
+<!-- Sayfa içeriği -->
+<div class="content">
+  <!-- İletişim Kısmı -->
+  <section id="iletisim" class="py-5" style="background-color: #f1f3f5;">
+    <div class="container">
+      <div class="row">
+        <!-- Sol Kısım: İletişim Bilgileri -->
+        <div class="col-md-6">
+          <h2 class="text-warning fw-bold mb-4">İletişim</h2>
+          <p class="fs-5 mb-4 text-muted">Bize ulaşmak için aşağıdaki bilgileri kullanabilirsiniz.</p>
+          
+          <!-- İletişim Bilgileri -->
+          <ul class="list-unstyled fs-5 text-muted">
+            <li><strong>Adres:</strong> Lion Premium Garage, Konya, Türkiye</li>
+            <li><strong>Telefon:</strong> +90 123 456 78 90</li>
+            <li><strong>E-posta:</strong> info@lionpremium.com</li>
+          </ul>
+          
+          <!-- Sosyal Medya Bağlantıları -->
+          <div class="social-icons mt-4">
+            <a href="#" class="text-warning me-3" target="_blank">
+              <i class="fa-brands fa-instagram" style="font-size: 2rem;"></i>
+            </a>
+            <a href="#" class="text-warning me-3" target="_blank">
+              <i class="fa-brands fa-facebook" style="font-size: 2rem;"></i>
+            </a>
+            <a href="#" class="text-warning" target="_blank">
+              <i class="fa-brands fa-twitter" style="font-size: 2rem;"></i>
+            </a>
           </div>
         </div>
+        
+        <!-- Sağ Kısım: İletişim Formu -->
+        <div class="col-md-6">
+          <h2 class="text-warning fw-bold mb-4">Bize Ulaşın</h2>
+          
+          <!-- İletişim Formu -->
+          <form>
+            <div class="mb-3">
+              <label for="isim" class="form-label fs-5">Adınız</label>
+              <input type="text" class="form-control" id="isim" placeholder="Adınız" required>
+            </div>
+            <div class="mb-3">
+              <label for="soyad" class="form-label fs-5">Soyadınız</label>
+              <input type="text" class="form-control" id="soyad" placeholder="Soyadınız" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label fs-5">E-posta Adresiniz</label>
+              <input type="email" class="form-control" id="email" placeholder="E-posta adresiniz" required>
+            </div>
+            <div class="mb-3">
+              <label for="mesaj" class="form-label fs-5">Mesajınız</label>
+              <textarea class="form-control" id="mesaj" rows="4" placeholder="Mesajınızı buraya yazın" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-warning btn-lg shadow-lg">Gönder</button>
+          </form>
+        </div>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
+</div>
 
-<!-- Footer Kısmı -->
-<footer class="py-3 my-4">
+
+
+
+
+
+
+  <!-- Footer Kısmı -->
+  <footer class="py-3">
     <ul class="nav justify-content-center border-bottom pb-3 mb-3">
       <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Ana Sayfa</a></li>
       <li class="nav-item"><a href="urunler.html" class="nav-link px-2 text-body-secondary">Ürünler</a></li>
       <li class="nav-item"><a href="iletisim.html" class="nav-link px-2 text-body-secondary">İletişim</a></li>
       <li class="nav-item"><a href="hakkimizda.html" class="nav-link px-2 text-body-secondary">Hakkımızda</a></li>
     </ul>
-    <p class="text-center">© 2024 Lion Car Premium, Tüm Hakları Saklıdır.</p>
+    <p class="text-center">© 2024 Lion Car Detailing. Tüm hakları saklıdır.</p>
   </footer>
 
-</body>
-
-  <!-- Bootstrap 5 JS ve Bağımlılıkları -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
