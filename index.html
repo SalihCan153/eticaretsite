@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lion Premium</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #1A1711; /* Logodaki deri rengi */
+    }
+    .header {
+  background-color: #1A1711 !important;
+}
+
+
+    header {
+      color: #FFD700; /* Altın metin rengi */
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #FFD700; /* Altın renk */
+    }
+
+    /* Carousel */
+    .carousel-item img {
+      height: 70vh;
+      object-fit: cover;
+    }
+
+    /* Genel carousel metin stili */
+    .carousel-caption {
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7); /* Daha opak arka plan */
+      padding: 15px;
+      border-radius: 8px;
+      color: white;
+    }
+
+    /* Lion Logo görseli için özel stil */
+    .carousel-item.lion-logo .carousel-caption {
+      background: none; /* Siyah arka plan kaldırıldı */
+      padding: 0;
+    }
+
+    /* Altın yazı stili */
+    .carousel-caption h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #FFD700; /* Altın renk */
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Gölgeleme */
+    }
+
+    .carousel-caption p {
+      font-size: 1.5rem;
+      color: rgba(255, 255, 255, 0.75);
+      margin-top: 10px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Gölgeleme */
+    }
+
+    .section {
+      padding: 40px 0;
+    }
+
+    .section h2 {
+      color: #FFD700;
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      filter: invert(1);
+    }
+
+    /* Footer Kısmı */
+    footer {
+      background-color: #1A1711; /* Footer arka planı deri rengi */
+      color: white; /* Yazı rengi beyaz */
+    }
+
+    footer .nav-item .nav-link {
+      color: white !important; /* Linklerin rengi beyaz, !important ile daha güçlü yapılır */
+    }
+
+    footer .nav-item .nav-link:hover {
+      color: #FFD700 !important; /* Link üzerine gelindiğinde altın renk */
+    }
+
+    footer p {
+      color: white; /* Alt metin beyaz */
+    }
+
+    /* Featurette section */
+    .featurette {
+      background-color: #1A1711;
+      padding: 40px 0;
+    }
+
+    .featurette .featurette-heading {
+      color: #FFD700; /* Altın renk başlık */
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    .featurette .lead {
+      color: white;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+
+    /* Image responsive ve ortalanmış */
+    .featurette-image {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+<header class="header bg-dark text-white shadow-lg" style="background-color: #1A1711;">
+  <nav class="navbar navbar-expand-lg navbar-dark container">
+    <!-- Logo ve Marka Adı -->
+    <div class="d-flex align-items-center">
+      <i class="fa-solid fa-utensils me-2" style="color: gold; font-size: 2rem;"></i>
+      <a class="navbar-brand text-warning fs-2 fw-bold" href="index.html">Lion Premium</a>
+    </div>
+
+    <!-- Menü -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="urunler.html">Ürünler</a></li>
+        <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+        <li class="nav-item"><a class="nav-link" href="hakkimizda.html">Hakkımızda</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+  <main>
+<!-- İçerik Kısmı -->
+<main>
+  <!-- Ana Sayfa Görsel Kısmı -->
+  <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" aria-label="Slide 1" class="active" aria-current="true"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active lion-logo">
+        <img src="anasayfagörsel/lion-logo.jpg" class="d-block w-100" alt="Lion Logo">
+        <div class="carousel-caption">
+          <!-- Boş bırakıldı, siyah arka plan kaldırıldı -->
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="anasayfagörsel/car-detail.jpg" class="d-block w-100" alt="Car Detail">
+        <div class="carousel-caption">
+          <h1>Özel Araç Detaylandırma</h1>
+          <p>Tüm araç detaylandırma hizmetlerimizde en iyi fırsatları yakalayın, ihtiyaçlarınıza özel hizmetler sunuyoruz.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="anasayfagörsel/car-detail2.jpg" class="d-block w-100" alt="Car Detail 2">
+        <div class="carousel-caption">
+          <h1>Premium Hizmetler</h1>
+          <p>Her zaman kaliteli hizmet garanti ediyoruz, araçlarınıza en iyi bakımı sunuyoruz.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Carousel Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Önceki</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Sonraki</span>
+    </button>
+  </div>
+
+<!-- İçerik Kısmı -->
+<section class="py-5" style="background-color: #1A1711;">
+  <div class="container text-white">
+    <div class="text-center mb-5">
+      <!-- Başlık düzenlemesi, büyük ve vurucu -->
+      <h2 class="display-3 text-warning fw-bold mb-4">Lion Premium Garage'a Hoşgeldiniz</h2>
+      <!-- İçerik düzenlemesi, daha etkili bir dil ve şık fontlar -->
+      <p class="lead fs-2 mb-4">Lion Premium Garage olarak, aracınızın her yönüyle mükemmel olmasını sağlamak için buradayız. Yüksek kaliteli araç bakım hizmetlerimiz, yalnızca estetik değil, aynı zamanda aracınızın performansını da artırmak için tasarlanmıştır. Yola çıkmadan önce en iyi versiyonunuzu yansıtın!</p>
+    </div>
+    <!-- 2 Kolonlu Kartlar -->
+    <div class="row">
+      <!-- Kart 1 - Araç Polishing ve Boya Koruma -->
+      <div class="col-md-6 mb-4">
+        <div class="card text-white" style="background-color: rgba(0, 0, 0, 0.7); flex: 1; display: flex; flex-direction: column; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease-in-out;">
+          <img src="anasayfagörsel/seramik-kaplama.jpg" class="card-img-top" alt="Araç Polishing ve Boya Koruma" style="object-fit: cover; height: 250px;">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-warning">Araç Polishing ve Boya Koruma</h5>
+            <p class="card-text fs-5">Aracınızın yüzeyini pürüzsüz hale getirerek, boya koruma işlemi ile uzun süreli parlaklık ve dayanıklılık sağlıyoruz. Araç yüzeyinizi en iyi şekilde koruyarak dış etkenlere karşı dayanıklılık kazandırıyoruz.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kart 2 - Cam Koruma ve Pencere Filmi -->
+      <div class="col-md-6 mb-4">
+        <div class="card text-white" style="background-color: rgba(0, 0, 0, 0.7); flex: 1; display: flex; flex-direction: column; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease-in-out;">
+          <img src="anasayfagörsel/cam-filmi.png" class="card-img-top" alt="Cam Koruma ve Pencere Filmi" style="object-fit: cover; height: 250px;">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-warning">Cam Koruma ve Pencere Filmi</h5>
+            <p class="card-text fs-5">Araç camlarınızın korumasını sağlayan ve iç mekanın sıcaklığını dengeleyen pencere filmi uygulamalarıyla güvenliği ve konforu artırıyoruz. UV ışınlarına karşı ekstra koruma ve iç mekanın serin tutulmasını sağlıyoruz.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Menu / Featurette Kısmı -->
+<section id="menu" class="py-5" style="background-image: url('anasayfagörsel/car-wash.jpg'); background-size: cover; background-position: center;">
+  <div class="container text-white">
+    <div class="text-center mb-5">
+      <!-- "Oh yeah, it’s that good" yazısını belirgin hale getirdik -->
+      <h2 class="text-warning display-3 fw-bold">Her Detayda Mükemmel Sonuç</h2>
+      <p class="text-light fs-4">Araç bakım hizmetlerimiz, aracınızın en iyi şekilde görünmesini ve çalışmasını sağlamak için özelleştirilmiştir. En kaliteli ürünler ve uzman tekniklerle, her zaman mükemmel bir sonuç garanti ediyoruz.</p>
+    </div>
+    <div class="row g-4">
+      <!-- Detailing Services -->
+      <div class="col-md-4 d-flex">
+        <div class="card text-white" style="background-color: rgba(0, 0, 0, 0.7); flex: 1; display: flex; flex-direction: column; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease-in-out;">
+          <img src="anasayfagörsel/engine-detailing.jpg" class="card-img-top" alt="Motor Detaylandırma" style="object-fit: cover; height: 250px;">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-warning">Motor Detaylandırma</h5>
+            <p class="card-text">Motorunuzu derinlemesine temizliyoruz, böylece en iyi performansla çalışmasını sağlıyoruz.</p>
+            <a href="https://www.youtube.com/shorts/rWwm2Vd1JF4" class="btn btn-warning mt-auto">Detaylı Video</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 d-flex">
+        <div class="card text-white" style="background-color: rgba(0, 0, 0, 0.7); flex: 1; display: flex; flex-direction: column; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease-in-out;">
+          <img src="anasayfagörsel/interior-detailing.jpeg" class="card-img-top" alt="İç Mekan Detaylandırma" style="object-fit: cover; height: 250px;">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-warning">İç Mekan Detaylandırma</h5>
+            <p class="card-text">Araç iç mekanınızdaki her köşeyi temizliyor, size taze ve yenilenmiş bir ortam sunuyoruz.</p>
+            <a href="https://www.youtube.com/watch?v=XevlJ4rEd3Y" class="btn btn-warning mt-auto">Detaylı Video</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 d-flex">
+        <div class="card text-white" style="background-color: rgba(0, 0, 0, 0.7); flex: 1; display: flex; flex-direction: column; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease-in-out;">
+          <img src="anasayfagörsel/exterior-detailing.jpg" class="card-img-top" alt="Dış Mekan Detaylandırma" style="object-fit: cover; height: 250px;">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-warning">Dış Mekan Detaylandırma</h5>
+            <p class="card-text">Araç dış yüzeyini restore ediyor, korunması için gerekli tüm işlemleri gerçekleştiriyoruz.</p>
+            <a href="https://www.youtube.com/watch?v=RQ1YwgMtaGo" class="btn btn-warning mt-auto">Detaylı Video</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+  <!-- Footer Kısmı -->
+  <div class="container">
+    <footer class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Ana Sayfa</a></li>
+        <li class="nav-item"><a href="urunler.html" class="nav-link px-2 text-body-secondary">Ürünler</a></li>
+        <li class="nav-item"><a href="iletisim.html" class="nav-link px-2 text-body-secondary">İletişim</a></li>
+        <li class="nav-item"><a href="hakkimizda.html" class="nav-link px-2 text-body-secondary">Hakkımızda</a></li>
+      </ul>
+      <p class="text-center">© 2024 Lion Car Premium , Tüm Hakları Saklıdır.</p>
+    </footer>
+  </div>
+
+  
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
